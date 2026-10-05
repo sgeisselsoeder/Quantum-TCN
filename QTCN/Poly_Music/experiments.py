@@ -69,7 +69,7 @@ def nll_loss(output, target, eps=1e-8):
     return loss
 
 
-def calculate_metrics(model, dataloader, device):
+def calculate_metrics(model, dataloader, device, criterion=None):
     model.eval()
     total_loss = 0.0
     total_count = 0
